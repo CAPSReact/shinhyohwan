@@ -1,5 +1,5 @@
 import Welcome from "../components/Welcome";
-import "../styles/style.css";
+import "../styles/style.css"; 
 
 export default function Home(){
     return (

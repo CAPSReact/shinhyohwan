@@ -1,28 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../../styles/style.css';
+import { Input, Label, SignupStyle, UserSelectStyle, WelcomeStyle, WrapperStyle, SignUpSayStyle,SignupBtnStyle } from '../../styles/style';
 
 export default function Signup() {
-    const [id, setId] = useState('');
-    const [pw, setPw] = useState('');
-    const [userType, setUserType] = useState('');
-    let isFormCompleted = (id != '' && pw != '' && userType != '');
     return (
-        <div className='wrapper'>
-            <h1 className = "signup">회원가입</h1>
-            <h2 className = "welcome">반갑습니다.</h2>
-            <p className = "id">ID</p>
-            <input type = "text" className = "id_input" placeholder = "id" value={id} onChange={(e) => setId(e.target.value)}></input>
-            <p className = "pw">PW</p>
-            <input type = "password" className = "pw_input" placeholder = "password" value={pw} onChange={(e) => setPw(e.target.value)}></input>
-            <p className = "user">회원 유형</p>
-            <select className = "user_select" onChange={(e) => {setUserType(e.target.value)}} value={userType}>
+        <WrapperStyle>
+            <SignupStyle>회원가입</SignupStyle>
+            <WelcomeStyle>반갑습니다</WelcomeStyle>
+            <Label>ID</Label>
+            <Input type = "text" className = "id_input" placeholder = "id"></Input>
+            <Label>PW</Label>
+            <Input type = "password" className = "pw_input" placeholder = "password">
+            </Input>
+            <Label>회원유형</Label>
+            <UserSelectStyle>
                 <option value = "ghlwkd">회장</option>
                 <option value = "qnghlwkd">부회장</option>
                 <option value = "manager">집행부</option>
                 <option value = "user">부원</option>
-            </select>
-            <p className="signup_say" style={isFormCompleted? {color: "#8ED0F4"} : {color: "#ED1B24"}}>{isFormCompleted? '가입이 가능합니다.' : '모든 정보를 입력해주세요!' }</p>
-            <button className = "signup_btn" disabled={!isFormCompleted}>가입(signup)</button>
-        </div>
+            </UserSelectStyle>
+            <SignUpSayStyle>가입이 안됩니다</SignUpSayStyle>
+            <SignupBtnStyle>가입(signup)</SignupBtnStyle>
+        </WrapperStyle>
     );
 }

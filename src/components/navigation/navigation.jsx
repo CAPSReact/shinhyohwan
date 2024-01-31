@@ -23,11 +23,11 @@ export default function Navigation() {
             <InSideBtn />
             Signup
             </BtnBox>
-            <BtnBox onClick={() => { navigate('/home'); }}>
+            <BtnBox onClick={() => { navigate('/House'); }}>
             <BoardBtn />
             home
             </BtnBox>
-            <BtnBox onClick={() => { navigate('/home'); }}>
+            <BtnBox onClick={() => { navigate('/InSide'); }}>
             <ProfileBtn />
             home
             </BtnBox>

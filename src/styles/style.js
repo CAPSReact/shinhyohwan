@@ -150,3 +150,27 @@ export const Circle = styled.div`
 		border-radius: 50px;
         animation: ${FadeIn} 2s ease-out;
 `;
+
+export const Box = styled.div`
+  margin-top: 0px;
+  width: 100%;
+  max-width: 390px;
+  height: 100vh;
+`;
+
+/* 3d pages */
+export const InGameButtonStyle = styled.div`
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: ${({ theme }) => theme.colors.marin};
+  color: ${({ theme }) => theme.colors.white};
+  font-size: 18px;
+  border-radius: 10px;
+  bottom: 140px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+`;

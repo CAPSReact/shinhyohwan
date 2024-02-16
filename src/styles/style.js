@@ -152,7 +152,7 @@ export const Circle = styled.div`
 `;
 
 export const Box = styled.div`
-  margin-top: 0px;
+  margin-top: 0pㄷx;
   width: 100%;
   max-width: 390px;
   height: 100vh;
